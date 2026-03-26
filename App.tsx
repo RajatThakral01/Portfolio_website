@@ -139,7 +139,7 @@ const App: React.FC = () => {
             <button 
               key={item} 
               onClick={() => scrollToSection(item.toLowerCase())}
-              className="hover:text-[#a8fbd3] transition-colors text-white cursor-pointer bg-transparent border-none"
+              className="text-base text-black hover:text-[#333333] transition-colors cursor-pointer bg-transparent border-none"
               data-hover="true"
             >
               {item}
