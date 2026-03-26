@@ -13,7 +13,7 @@
 
 ## 🚀 Live Demo
 
-Visit the deployed portfolio: **[AI & Data Portfolio](https://ai.studio/apps/af041aec-e18c-4f53-8977-8bd8051626ea)**
+Visit the deployed portfolio: **[AI & Data Portfolio](https://rajatthakral.vercel.app/)**
 
 ---
 
