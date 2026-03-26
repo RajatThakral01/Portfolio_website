@@ -130,7 +130,7 @@ const App: React.FC = () => {
       <AIChat />
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-8 py-6 mix-blend-difference">
+      <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-8 py-6">
         <div className="font-heading text-xl md:text-2xl font-bold tracking-tighter text-white cursor-default z-50">RAJAT.T</div>
         
         {/* Desktop Menu */}
@@ -139,7 +139,7 @@ const App: React.FC = () => {
             <button 
               key={item} 
               onClick={() => scrollToSection(item.toLowerCase())}
-              className="text-base text-black hover:text-[#333333] transition-colors cursor-pointer bg-transparent border-none"
+              className="text-base text-white font-semibold hover:text-[#a8fbd3] transition-colors cursor-pointer bg-transparent border-none tracking-widest uppercase"
               data-hover="true"
             >
               {item}
