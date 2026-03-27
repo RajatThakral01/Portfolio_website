@@ -261,14 +261,14 @@ const App: React.FC = () => {
              initial={{ scaleX: 0 }}
              animate={{ scaleX: 1 }}
              transition={{ duration: 1.5, delay: 0.5, ease: "circOut" }}
-             className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mt-4 md:mt-8 mb-6 md:mb-8"
+             className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mt-4 md:mt-8 mb-12 md:mb-16"
           />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="flex flex-col items-center gap-3 mt-4 px-4"
+            className="flex flex-col items-center gap-3 mt-8 md:mt-12 px-4"
           >
             <p className="text-lg md:text-2xl font-normal max-w-xl mx-auto text-white/90 leading-relaxed drop-shadow-lg text-center">
               Building AI automation systems, LLM pipelines, and agentic workflows.
