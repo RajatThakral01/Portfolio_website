@@ -137,20 +137,8 @@ export const sendMessageToGemini = async (
 
   try {
     const chat = initializeChat();
-    const responseStream = await chat.sendMessageStream({ message });
-
-    let hasOutput = false;
-    for await (const chunk of responseStream) {
-      const chunkText = chunk.text || '';
-      if (chunkText) {
-        hasOutput = true;
-        onChunk(chunkText);
-      }
-    }
-
-    if (!hasOutput) {
-      onChunk("Transmission interrupted.");
-    }
+    const response = await chat.sendMessage({ message });
+    onChunk(response.text || "Transmission interrupted.");
   } catch (error) {
     console.error("Gemini Error:", error);
     onChunk("Signal lost. Try again later.");
