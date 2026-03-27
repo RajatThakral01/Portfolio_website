@@ -220,7 +220,7 @@ const App: React.FC = () => {
       <header className="relative min-h-[100svh] flex flex-col items-center justify-center px-4">
         <motion.div 
           style={{ y, opacity }}
-          className="z-10 text-center flex flex-col items-center w-full max-w-6xl pb-16 md:pb-20 pt-20 md:pt-24"
+          className="z-10 text-center flex flex-col items-center w-full max-w-6xl pb-16 md:pb-20 pt-6 md:pt-8"
         >
            {/* Role / Location */}
           <motion.div
