@@ -220,7 +220,7 @@ const App: React.FC = () => {
       <header className="relative min-h-[100svh] flex flex-col items-center justify-center px-4">
         <motion.div 
           style={{ y, opacity }}
-          className="z-10 text-center flex flex-col items-center w-full max-w-6xl pb-48 md:pb-56 pt-20 md:pt-24"
+          className="z-10 text-center flex flex-col items-center w-full max-w-6xl pb-16 md:pb-20 pt-20 md:pt-24"
         >
            {/* Role / Location */}
           <motion.div
@@ -308,7 +308,7 @@ const App: React.FC = () => {
       {/* PROJECTS SECTION */}
       <section id="projects" className="relative z-10 py-20 md:py-32">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center mb-12 md:mb-16 px-4">
+          <div className="w-full flex justify-center mb-12 md:mb-16">
              <h2 className="text-5xl md:text-8xl font-heading font-bold uppercase leading-[0.9] drop-shadow-lg text-center">
               Selected <br/> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#a8fbd3] to-[#4fb7b3]">Projects</span>
