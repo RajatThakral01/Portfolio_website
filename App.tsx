@@ -134,7 +134,7 @@ const App: React.FC = () => {
         <div className="font-heading text-xl md:text-2xl font-bold tracking-tighter text-white cursor-default z-50">RAJAT.T</div>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-10 text-sm font-bold tracking-widest uppercase">
+        <div className="hidden md:flex gap-10 text-sm font-bold tracking-widest uppercase absolute left-1/2 transform -translate-x-1/2">
           {['Projects', 'Experience', 'Skills'].map((item) => (
             <button 
               key={item} 
