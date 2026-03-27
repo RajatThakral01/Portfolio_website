@@ -15,7 +15,7 @@ export const initializeChat = (): Chat => {
   const ai = new GoogleGenAI({ apiKey: API_KEY });
   
   chatSession = ai.chats.create({
-    model: 'gemini-1.5-flash',
+    model: 'gemini-2.5-flash',
     config: {
       systemInstruction: `You are 'RAJ', the AI assistant on Rajat Thakral's portfolio website.
 Your ONLY job is to represent Rajat and answer questions about him.
