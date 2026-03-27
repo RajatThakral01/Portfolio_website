@@ -146,13 +146,33 @@ const App: React.FC = () => {
             </button>
           ))}
         </div>
-        <button 
-          onClick={() => window.open('https://drive.google.com/file/d/1AovenKtOlbooJTvA1Nyl6v-mtorOroUu/view?usp=sharing', '_blank')}
-          className="hidden md:inline-block border border-white px-8 py-3 text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 text-white cursor-pointer bg-transparent"
-          data-hover="true"
-        >
-          Resume
-        </button>
+        <div className="hidden md:flex items-center gap-6">
+          <a
+            href="https://github.com/RajatThakral01"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-bold tracking-widest uppercase text-white hover:text-[#a8fbd3] transition-colors cursor-pointer"
+            data-hover="true"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/rajat-thakral-067548204"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-bold tracking-widest uppercase text-white hover:text-[#a8fbd3] transition-colors cursor-pointer"
+            data-hover="true"
+          >
+            LinkedIn
+          </a>
+          <button 
+            onClick={() => window.open('https://drive.google.com/file/d/1AovenKtOlbooJTvA1Nyl6v-mtorOroUu/view?usp=sharing', '_blank')}
+            className="border border-white px-8 py-3 text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 text-white cursor-pointer bg-transparent"
+            data-hover="true"
+          >
+            Resume
+          </button>
+        </div>
 
         {/* Mobile Menu Toggle */}
         <button 
@@ -261,31 +281,7 @@ const App: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="flex gap-4 mt-6 justify-center flex-wrap"
-          >
-            <a
-              href="https://github.com/RajatThakral01"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-white/30 text-white font-bold text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
-              data-hover="true"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/rajat-thakral-067548204"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-[#a8fbd3] text-black font-bold text-xs tracking-widest uppercase hover:bg-white transition-all duration-300 cursor-pointer"
-              data-hover="true"
-            >
-              LinkedIn
-            </a>
-          </motion.div>
+
         </motion.div>
 
         {/* MARQUEE */}
