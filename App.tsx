@@ -217,9 +217,9 @@ const App: React.FC = () => {
           {/* Main Title */}
           <div className="relative w-full flex justify-center items-center">
             <GradientText 
-              text="RAJAT" 
+              text="RAJAT THAKRAL" 
               as="h1" 
-              className="text-[15vw] md:text-[14vw] leading-[0.9] font-black tracking-tighter text-center" 
+              className="text-[8vw] md:text-[7vw] leading-[0.9] font-black tracking-tighter text-center" 
             />
             {/* Optimized Orb */}
             <motion.div 
@@ -237,14 +237,48 @@ const App: React.FC = () => {
              className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mt-4 md:mt-8 mb-6 md:mb-8"
           />
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="text-base md:text-2xl font-light max-w-xl mx-auto text-white/90 leading-relaxed drop-shadow-lg px-4"
+            className="flex flex-col items-center gap-3 mt-4 px-4"
           >
-            Building AI automation systems, LLM pipelines, and agentic workflows.
-          </motion.p>
+            <p className="text-lg md:text-2xl font-normal max-w-xl mx-auto text-white/90 leading-relaxed drop-shadow-lg text-center">
+              Building AI automation systems, LLM pipelines, and agentic workflows.
+            </p>
+            <p className="text-sm md:text-base text-white/50 font-mono tracking-wider text-center max-w-lg">
+              Google Certified Data Professional · B.Tech CSE · JK Lakshmipat University
+            </p>
+            <p className="text-sm md:text-base text-white/50 font-mono tracking-wider text-center max-w-lg">
+              Open to full-time roles & freelance projects in AI & Data
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="flex gap-4 mt-6 justify-center flex-wrap"
+          >
+            <a
+              href="https://github.com/RajatThakral01"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-white/30 text-white font-bold text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer"
+              data-hover="true"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/rajat-thakral-067548204"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-[#a8fbd3] text-black font-bold text-xs tracking-widest uppercase hover:bg-white transition-all duration-300 cursor-pointer"
+              data-hover="true"
+            >
+              LinkedIn
+            </a>
+          </motion.div>
         </motion.div>
 
         {/* MARQUEE */}
