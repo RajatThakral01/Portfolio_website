@@ -268,7 +268,7 @@ const App: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="flex flex-col items-center gap-3 mt-8 md:mt-12 px-4"
+            className="flex flex-col items-center gap-3 mt-8 md:mt-12 mb-12 md:mb-16 px-4"
           >
             <p className="text-lg md:text-2xl font-normal max-w-xl mx-auto text-white/90 leading-relaxed drop-shadow-lg text-center">
               Building AI automation systems, LLM pipelines, and agentic workflows.
