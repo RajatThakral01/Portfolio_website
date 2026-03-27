@@ -216,11 +216,18 @@ const App: React.FC = () => {
 
           {/* Main Title */}
           <div className="relative w-full flex justify-center items-center">
-            <GradientText 
-              text="RAJAT THAKRAL" 
-              as="h1" 
-              className="text-[8vw] md:text-[7vw] leading-[0.9] font-black tracking-tighter text-center" 
-            />
+            <div className="flex flex-col items-center">
+              <GradientText 
+                text="RAJAT" 
+                as="h1" 
+                className="text-[12vw] md:text-[10vw] leading-[0.85] font-black tracking-tighter text-center" 
+              />
+              <GradientText 
+                text="THAKRAL" 
+                as="h1" 
+                className="text-[12vw] md:text-[10vw] leading-[0.85] font-black tracking-tighter text-center" 
+              />
+            </div>
             {/* Optimized Orb */}
             <motion.div 
                className="absolute -z-20 w-[50vw] h-[50vw] bg-white/5 blur-[40px] rounded-full pointer-events-none will-change-transform"
