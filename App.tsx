@@ -220,12 +220,12 @@ const App: React.FC = () => {
               <GradientText 
                 text="RAJAT" 
                 as="h1" 
-                className="text-[12vw] md:text-[10vw] leading-[0.85] font-black tracking-tighter text-center" 
+                className="text-[9vw] md:text-[7vw] leading-[0.85] font-black tracking-tighter text-center" 
               />
               <GradientText 
                 text="THAKRAL" 
                 as="h1" 
-                className="text-[12vw] md:text-[10vw] leading-[0.85] font-black tracking-tighter text-center" 
+                className="text-[9vw] md:text-[7vw] leading-[0.85] font-black tracking-tighter text-center" 
               />
             </div>
             {/* Optimized Orb */}
