@@ -217,10 +217,10 @@ const App: React.FC = () => {
       </AnimatePresence>
 
       {/* HERO SECTION */}
-      <header className="relative h-[100svh] min-h-[600px] flex flex-col items-center justify-center overflow-hidden px-4">
+      <header className="relative min-h-[100svh] flex flex-col items-center justify-center px-4">
         <motion.div 
           style={{ y, opacity }}
-          className="z-10 text-center flex flex-col items-center w-full max-w-6xl pb-24 md:pb-20"
+          className="z-10 text-center flex flex-col items-center w-full max-w-6xl pb-48 md:pb-56 pt-20 md:pt-24"
         >
            {/* Role / Location */}
           <motion.div
@@ -261,14 +261,14 @@ const App: React.FC = () => {
              initial={{ scaleX: 0 }}
              animate={{ scaleX: 1 }}
              transition={{ duration: 1.5, delay: 0.5, ease: "circOut" }}
-             className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mt-4 md:mt-8 mb-12 md:mb-16"
+             className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mt-2 md:mt-4 mb-4 md:mb-6"
           />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="flex flex-col items-center gap-3 mt-8 md:mt-12 mb-12 md:mb-16 px-4"
+            className="flex flex-col items-center gap-1 md:gap-2 mt-2 md:mt-4 mb-16 md:mb-24 px-4"
           >
             <p className="text-lg md:text-2xl font-normal max-w-xl mx-auto text-white/90 leading-relaxed drop-shadow-lg text-center">
               Building AI automation systems, LLM pipelines, and agentic workflows.
@@ -285,7 +285,7 @@ const App: React.FC = () => {
         </motion.div>
 
         {/* MARQUEE */}
-        <div className="absolute bottom-12 md:bottom-16 left-0 w-full py-4 md:py-6 bg-white text-black z-20 overflow-hidden border-y-4 border-black shadow-[0_0_40_rgba(255,255,255,0.4)]">
+        <div className="absolute bottom-0 left-0 w-full py-4 md:py-6 bg-white text-black z-20 overflow-hidden border-y-4 border-black shadow-[0_0_40_rgba(255,255,255,0.4)]">
           <motion.div 
             className="flex w-fit will-change-transform"
             animate={{ x: "-50%" }}
