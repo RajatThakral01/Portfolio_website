@@ -34,44 +34,19 @@ const AIChat: React.FC = () => {
   }, [messages, isOpen]);
 
   const handleSend = async () => {
-    if (!input.trim() || isLoading) return;
+    if (!input.trim()) return;
 
-    const userInput = input;
-    const userMessage: ChatMessage = { role: 'user', text: userInput };
-    setMessages(prev => [...prev, userMessage, { role: 'model', text: '' }]);
+    const userMessage: ChatMessage = { role: 'user', text: input };
+    setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
 
     // Slight delay to allow state update to render before scrolling
     setTimeout(scrollToBottom, 100);
 
-    let receivedFirstChunk = false;
+    const responseText = await sendMessageToGemini(input);
 
-    await sendMessageToGemini(userInput, (chunk) => {
-      if (!receivedFirstChunk) {
-        receivedFirstChunk = true;
-        setIsLoading(false);
-      }
-
-      setMessages(prev => {
-        if (!prev.length) return prev;
-        const updated = [...prev];
-        const lastIndex = updated.length - 1;
-        const lastMessage = updated[lastIndex];
-
-        if (lastMessage.role !== 'model') return prev;
-
-        updated[lastIndex] = {
-          ...lastMessage,
-          text: `${lastMessage.text}${chunk}`,
-        };
-
-        return updated;
-      });
-
-      setTimeout(scrollToBottom, 0);
-    });
-
+    setMessages(prev => [...prev, { role: 'model', text: responseText }]);
     setIsLoading(false);
   };
 

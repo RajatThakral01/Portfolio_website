@@ -5,7 +5,7 @@
 
 import { GoogleGenAI, Chat } from "@google/genai";
 
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
+const API_KEY = process.env.GEMINI_API_KEY || '';
 
 let chatSession: Chat | null = null;
 
@@ -15,7 +15,7 @@ export const initializeChat = (): Chat => {
   const ai = new GoogleGenAI({ apiKey: API_KEY });
   
   chatSession = ai.chats.create({
-    model: 'gemini-2.0-flash',
+    model: 'gemini-1.5-flash',
     config: {
       systemInstruction: `You are 'RAJ', the AI assistant on Rajat Thakral's portfolio website.
 Your ONLY job is to represent Rajat and answer questions about him.
@@ -126,21 +126,17 @@ RESPONSE RULES:
   return chatSession;
 };
 
-export const sendMessageToGemini = async (
-  message: string,
-  onChunk: (chunk: string) => void
-): Promise<void> => {
+export const sendMessageToGemini = async (message: string): Promise<string> => {
   if (!API_KEY) {
-    onChunk("Systems offline. (Missing API Key)");
-    return;
+    return "Systems offline. (Missing API Key)";
   }
 
   try {
     const chat = initializeChat();
     const response = await chat.sendMessage({ message });
-    onChunk(response.text || "Transmission interrupted.");
+    return response.text || "Transmission interrupted.";
   } catch (error) {
     console.error("Gemini Error:", error);
-    onChunk("Signal lost. Try again later.");
+    return "Signal lost. Try again later.";
   }
 };
