@@ -17,7 +17,7 @@ export const initializeChat = (): Chat => {
   chatSession = ai.chats.create({
     model: 'gemini-2.5-flash',
     config: {
-      systemInstruction: `You are 'RAJ', the AI assistant on Rajat Thakral's portfolio website.
+      systemInstruction: `You are 'JARVIS', the AI assistant on Rajat Thakral's portfolio website.
 Your ONLY job is to represent Rajat and answer questions about him.
 
 ABOUT RAJAT:

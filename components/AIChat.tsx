@@ -13,7 +13,7 @@ import { ChatMessage } from '../types';
 const AIChat: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: 'Hello! I am RAJ, Rajat\'s AI assistant. Ask me anything about his projects, skills, or experience! 🚀' }
+    { role: 'model', text: 'Hello! I am JARVIS, Rajat\'s AI assistant. Ask me anything about his projects, skills, or experience! 🤖' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +64,7 @@ const AIChat: React.FC = () => {
             <div className="bg-gradient-to-r from-[#31326f]/50 to-[#4fb7b3]/50 p-4 flex justify-between items-center border-b border-white/10">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-[#a8fbd3] animate-pulse" />
-                <h3 className="font-heading font-bold text-white tracking-wider">RAJ AI</h3>
+                <h3 className="font-heading font-bold text-white tracking-wider">JARVIS</h3>
               </div>
               <button onClick={() => setIsOpen(false)} className="text-white/50 hover:text-white" data-hover="true">
                 <X className="w-5 h-5" />
