@@ -268,7 +268,7 @@ const App: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="flex flex-col items-center gap-1 md:gap-2 mt-2 md:mt-4 mb-16 md:mb-24 px-4"
+            className="flex flex-col items-center gap-1 md:gap-2 mt-2 md:mt-4 mb-6 md:mb-8 px-4"
           >
             <p className="text-lg md:text-2xl font-normal max-w-xl mx-auto text-white/90 leading-relaxed drop-shadow-lg text-center">
               Building AI automation systems, LLM pipelines, and agentic workflows.
@@ -308,8 +308,8 @@ const App: React.FC = () => {
       {/* PROJECTS SECTION */}
       <section id="projects" className="relative z-10 py-20 md:py-32">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 px-4">
-             <h2 className="text-5xl md:text-8xl font-heading font-bold uppercase leading-[0.9] drop-shadow-lg break-words w-full md:w-auto">
+          <div className="flex flex-col items-center justify-center mb-12 md:mb-16 px-4">
+             <h2 className="text-5xl md:text-8xl font-heading font-bold uppercase leading-[0.9] drop-shadow-lg text-center">
               Selected <br/> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#a8fbd3] to-[#4fb7b3]">Projects</span>
             </h2>
@@ -328,9 +328,11 @@ const App: React.FC = () => {
         <div className="absolute top-1/2 right-[-20%] w-[50vw] h-[50vw] bg-[#4fb7b3]/20 rounded-full blur-[40px] pointer-events-none will-change-transform" style={{ transform: 'translateZ(0)' }} />
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
-          <h2 className="text-4xl md:text-7xl font-heading font-bold mb-12 md:mb-16 leading-tight">
-            Professional <br/> <GradientText text="JOURNEY" className="text-5xl md:text-8xl" />
-          </h2>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-4xl md:text-7xl font-heading font-bold leading-tight inline-block">
+              Professional <br/> <GradientText text="JOURNEY" className="text-5xl md:text-8xl" />
+            </h2>
+          </div>
           
           <div className="space-y-8 md:space-y-12">
             {EXPERIENCES.map((exp, i) => (
